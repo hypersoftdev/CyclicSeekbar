@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("maven-publish")
 }
 
 android {
@@ -24,11 +25,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 }
 
@@ -39,4 +40,18 @@ dependencies {
     implementation(libs.material)
     implementation(libs.rebound)
 
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            groupId = "com.hypersoft.cyclicseekbar"
+            artifactId = "seekbar"
+            version = "1.2.5"
+
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
 }
