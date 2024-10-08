@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.sample.cyclicseekbar"
+    namespace = "com.hypersoft.cseekbar"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.sample.cyclicseekbar"
+        applicationId = "com.hypersoft.cseekbar"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -46,8 +46,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    implementation(project(":CyclicSeekbar"))
+
+    // CyclicSeekbar
+    implementation(project(":seekbar"))
 }

@@ -1,44 +1,40 @@
 # Cyclic Seekbar Library
 This library provides an intuitive and customizable cyclic seekbar for Android apps. By integrating it into your project, you can offer users a circular slider to adjust values seamlessly within a defined range.
 
-# Key Features:
-1. Easy Integration: Simply add the library to your project and start using the cyclic seekbar immediately.
-2. Highly Customizable:  Modify its appearance, size, and behavior to fit your app’s design and functionality.
-3. Smooth Circular Control: Provides a fluid, continuous control experience for users, perfect for volume, brightness, or other circular value adjustments.
-
-# Contributing
-
-We welcome feedback, and code contributions!❤️
-
-# Step-by-Step Usage: 
-
-## Dependency Addition
-To use the cyclic seekbar, add it to your project by updating your Gradle files:
+## Key Features:
+1. **Easy Integration**: Simply add the library to your project and start using the cyclic seekbar immediately.
+2. **Highly Customizable**: Modify its appearance, size, and behavior to fit your app’s design and functionality.
+3. **Smooth Circular Control**: Provides a fluid, continuous control experience for users, perfect for volume, brightness, or other circular value adjustments.
 
 
-## Gradle Integration
+## Step-by-Step Usage:
 
-### Step A: Add Maven Repository
+### 1. Dependency Addition
 
-In your project-level build.gradle or settings.gradle file, add the required repository:
+To use the cyclic seekbar, follow these steps to update your Gradle files.
+
+#### Gradle Integration
+
+##### Step A: Add Maven Repository
+In your **project-level** `build.gradle` or `settings.gradle` file, add the following repository:
+
 ```
 repositories {
     google()
     mavenCentral()
     maven { url "https://jitpack.io" }
 }
-```  
+```
 
 ### Step B: Add Dependencies
 
-Next, include the cyclic seekbar library in your app-level build.gradle file. Replace x.x.x with the latest version:
+Include the cyclic seekbar library in your **app-level** `build.gradle` file. Replace `x.x.x` with the latest version:
+
 ```
 implementation 'com.github.hypersoftdev:CyclicSeekBar:1.0.0'
-
 ```
 
-
-## XML Integration
+### 2. XML Integration
 
 To integrate Cyclic SeekBar into your layout, use the following XML structure with customizable attributes:
 
@@ -61,7 +57,7 @@ To integrate Cyclic SeekBar into your layout, use the following XML structure wi
     app:cEnabled="true"
     app:cFreeRotation="true"
     app:cIndicatorWidth="0dp"
-    app:cKnobDrawable="@drawable/ic_drawable"  //use your own drawable  
+    app:cKnobDrawable="@drawable/ic_drawable"  <!-- Use your own drawable -->
     app:cKnobDrawableRotates="true"
     app:cNumberOfStates="50"
     app:cSelectedStateMarkerColor="@color/black"
@@ -78,13 +74,12 @@ To integrate Cyclic SeekBar into your layout, use the following XML structure wi
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"/>
-	
 ```
 
 
-## Implementation
+### 3. Implementation
 
-### Kotlin Example:
+#### Kotlin Example:
 
 ```
 class MainActivity : AppCompatActivity() {
@@ -97,12 +92,35 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupCyclicSeekBar() {
         val cyclicSeekBar = findViewById<CyclicSeekBar>(R.id.cyclicSeekBar)
-        cyclicSeekBar.setOnStateChanged(object : CyclicSeekbar.OnStateChanged {progress->
-            Toast.makeText(this, "Progress: $progress", Toast.LENGTH_SHORT).show()
-        }
+        cyclicSeekBar.setOnStateChanged(object : CyclicSeekbar.OnStateChanged {
+            override fun onStateChanged(progress: Int) {
+                Toast.makeText(this@MainActivity, "Progress: $progress", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 }
 ```
 
+# Acknowledgements
 
+This work would not have been possible without the invaluable contributions of **Muhammad Asif**. His expertise, dedication, and unwavering support have been instrumental in bringing this project to fruition.
 
+![Profile](https://github.com/hypersoftdev/CropView/blob/master/screenshot/profile_image.jpg?raw=true)
+
+We are deeply grateful for **Muhammad Asif** involvement and his belief in the importance of this work. His contributions have made a significant impact, and we are honored to have had the opportunity to collaborate with him.
+
+# LICENSE
+
+Copyright 2023 Hypersoft Inc
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
