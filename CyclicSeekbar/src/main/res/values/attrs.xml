@@ -1,0 +1,77 @@
+<resources>
+    <declare-styleable name="Cyclic">
+        <attr name="cNumberOfStates" format="integer"/>
+        <attr name="cDefaultState" format="integer"/>
+
+        <attr name="cBorderWidth" format="dimension"/>
+        <attr name="cBorderColor" format="reference|color"/>
+
+        <attr name="cIndicatorWidth" format="dimension"/>
+        <attr name="cIndicatorColor" format="reference|color"/>
+        <attr name="cIndicatorRelativeLength" format="float"/>
+
+        <attr name="cCircularIndicatorRelativeRadius" format="float"/>
+        <attr name="cCircularIndicatorRelativePosition" format="float"/>
+        <attr name="cCircularIndicatorColor" format="reference|color" />
+
+        <attr name="cKnobColor" format="reference|color"/>
+        <attr name="cKnobRelativeRadius" format="float"/>
+
+        <attr name="cKnobCenterColor" format="reference|color"/>
+        <attr name="cKnobCenterRelativeRadius" format="float"/>
+
+        <attr name="cKnobDrawable" format="integer"/>
+        <attr name="cKnobDrawableRotates" format="boolean"/>
+
+        <attr name="cStateMarkersWidth" format="dimension"/>
+        <attr name="cStateMarkersColor" format="reference|color"/>
+        <attr name="cStateMarkersRelativeLength" format="float"/>
+        <attr name="cSelectedStateMarkerColor" format="reference|color"/>
+        <attr name="cSelectedStateMarkerContinuous" format="boolean"/>
+
+        <attr name="cAnimation" format="boolean"/>
+        <attr name="cAnimationSpeed" format="float"/>
+        <attr name="cAnimationBounciness" format="float"/>
+
+        <attr name="cSwipe">
+            <enum name="off" value="0"/>
+            <enum name="vertical" value="1"/>
+            <enum name="horizontal" value="2"/>
+            <enum name="vertical_horizontal" value="3"/>
+            <enum name="circular" value="4"/>
+        </attr>
+        <attr name="cSwipeSensitivityPixels" format="integer" />
+
+        <attr name="cFreeRotation" format="boolean" />
+        <attr name="cMinAngle" format="float"/>
+        <attr name="cMaxAngle" format="float"/>
+
+        <attr name="cStateMarkersAccentWidth" format="dimension"/>
+        <attr name="cStateMarkersAccentColor" format="reference|color"/>
+        <attr name="cStateMarkersAccentRelativeLength" format="float"/>
+        <attr name="cStateMarkersAccentPeriodicity" format="integer"/>
+
+        <attr name="cShowBalloonValues" format="boolean"/>
+        <attr name="cBalloonValuesTimeToLive" format="integer"/>
+        <attr name="cBalloonValuesRelativePosition" format="float"/>
+        <attr name="cBalloonValuesTextSize" format="dimension"/>
+        <attr name="cBalloonValuesAnimation">
+            <enum name="pop" value="0"/>
+            <enum name="scale" value="1"/>
+            <enum name="fade" value="2"/>
+        </attr>
+        <attr name="cBalloonValuesArray" format="reference"/>
+        <attr name="cBalloonValuesSlightlyTransparent" format="boolean"/>
+
+        <attr name="cClickBehaviour">
+            <enum name="nothing" value = "0"/>
+            <enum name="next" value = "1"/>
+            <enum name="prev" value = "2"/>
+            <enum name="revert" value = "3"/>
+            <enum name="menu" value = "4" />
+            <enum name="user" value = "5" />
+        </attr>
+
+        <attr name="cEnabled" format="boolean"/>
+    </declare-styleable>
+</resources>

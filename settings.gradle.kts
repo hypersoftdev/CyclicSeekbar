@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "CyclicSeekbar"
 include(":app")
+include(":CyclicSeekbar")
