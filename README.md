@@ -1,5 +1,5 @@
-# Cyclic Seekbar Library
-This library provides an intuitive and customizable cyclic seekbar for Android apps. By integrating it into your project, you can offer users a circular slider to adjust values seamlessly within a defined range.
+# CyclicSeekbar
+**CyclicSeekbar** provides an intuitive and customizable cyclic seekbar for Android apps. By integrating it into your project, you can offer users a circular slider to adjust values seamlessly within a defined range.
 
 ## Key Features:
 1. **Easy Integration**: Simply add the library to your project and start using the cyclic seekbar immediately.
