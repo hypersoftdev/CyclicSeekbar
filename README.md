@@ -42,7 +42,8 @@ implementation 'com.github.hypersoftdev:CyclicSeekBar:1.0.0'
 
 To integrate Cyclic SeekBar into your layout, use the following XML structure with customizable attributes:
 
-&lt;com.hypersoft.cyclicseekbar.CyclicSeekbar
+```
+<com.hypersoft.cyclicseekbar.CyclicSeekbar
     android:id="@+id/cyclic_seekbar"
     android:layout_width="100dp"
     android:layout_height="100dp"
@@ -76,8 +77,9 @@ To integrate Cyclic SeekBar into your layout, use the following XML structure wi
     tools:cStateMarkersAccentColor="#B4B6C0"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    /&gt;
+    app:layout_constraintBottom_toBottomOf="parent"/>
+	
+```
 
 
 ## Implementation
