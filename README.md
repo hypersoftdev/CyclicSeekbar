@@ -1,5 +1,5 @@
-# Cyclic Seekbar Library
-This library provides an intuitive and customizable cyclic seekbar for Android apps. By integrating it into your project, you can offer users a circular slider to adjust values seamlessly within a defined range.
+# CyclicSeekbar
+**CyclicSeekbar** provides an intuitive and customizable cyclic seekbar for Android apps. By integrating it into your project, you can offer users a circular slider to adjust values seamlessly within a defined range.
 
 ## Key Features:
 1. **Easy Integration**: Simply add the library to your project and start using the cyclic seekbar immediately.
@@ -28,10 +28,10 @@ repositories {
 
 ### Step B: Add Dependencies
 
-Include the cyclic seekbar library in your **app-level** `build.gradle` file. Replace `x.x.x` with the latest version:
+Include the cyclic seekbar library in your **app-level** `build.gradle` file. Replace `x.x.x` with the latest version: [![](https://jitpack.io/v/hypersoftdev/CyclicSeekbar.svg)](https://jitpack.io/#hypersoftdev/CyclicSeekbar)
 
 ```
-implementation 'com.github.hypersoftdev:CyclicSeekBar:1.0.0'
+implementation 'com.github.hypersoftdev:CyclicSeekbarr:x.x.x'
 ```
 
 ### 2. XML Integration
