@@ -10,8 +10,8 @@
 
     <com.hypersoft.cyclicseekbar.CyclicSeekbar
         android:id="@+id/cyclic_seekbar"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         app:cAnimation="false"
         app:cAnimationBounciness="1"
         app:cAnimationSpeed="5"
