@@ -34,7 +34,95 @@ Include the cyclic seekbar library in your **app-level** `build.gradle` file. Re
 implementation 'com.github.hypersoftdev:CyclicSeekbar:x.x.x'
 ```
 
-### 2. XML Integration
+### 2. Attribute Summary
+
+<table>
+  <tr><th colspan="3">Attribute Summary</th></tr>
+  <tr><th>Attribute</th><th>Format</th><th>Description</th></tr>
+  <tr><td>cAnimation</td>
+      <td>boolean</td>
+      <td>Enable / disable indicator's animation.</td></tr>
+  <tr><td>cAnimationBounciness</td>
+      <td>int</td>
+      <td>Parameter "bounciness" applied to the spring physical model for the indicator's animation.</td></tr>
+  <tr><td>cAnimationSpeed</td>
+      <td>int</td>
+      <td>Parameter "speed" applied to the spring physical model for the indicator's animation.</td></tr>
+  <tr><td>cBalloonValuesAnimation</td>
+      <td>string</td>
+      <td>Animation. Choose among *fade*, *pop* or *scale*.</td></tr>
+  <tr><td>cBalloonValuesRelativePosition</td>
+      <td>int</td>
+      <td>Relative position of the balloons. 0 = center, 1 = edge. Values >1 are allowed.</td></tr>
+  <tr><td>cBalloonValuesSlightlyTransparent</td>
+      <td>boolean</td>
+      <td>When true, the balloons will be 75% visible.</td></tr>
+  <tr><td>cBalloonValuesTimeToLive</td>
+      <td>int</td>
+      <td>How long the popup balloons display. 0 = permanent.</td></tr>
+  <tr><td>cBorderWidth</td>
+      <td>dimension</td>
+      <td>Width of the external circle. 0 = disable.</td></tr>
+  <tr><td>cClickBehaviour</td>
+      <td>string</td>
+      <td>What is expected when the seekbar is clicked. Options: next value, previous value, reset to default value, let the user select with a popup menu, or define a custom listener. Default: next.<br>
+          Warning: the popup menu is available only with Compat.<br>
+          Warning: the custom listener (a Runnable) should be defined runtime, with setUserBehaviour().</td></tr>
+  <tr><td>cDefaultState</td>
+      <td>int</td>
+      <td>The starting state of the seekbar.</td></tr>
+  <tr><td>cEnabled</td>
+      <td>boolean</td>
+      <td>Enable / disable seekbar.</td></tr>
+  <tr><td>cFreeRotation</td>
+      <td>boolean</td>
+      <td>Enable free rotation. When false, after reaching maximum or minimum, the indicator will stop; when true, the value will continue in a round-robin fashion. Default: true.</td></tr>
+  <tr><td>cIndicatorWidth</td>
+      <td>dimension</td>
+      <td>Width of the line indicator. 0 = disable.</td></tr>
+  <tr><td>cKnobDrawable</td>
+      <td>drawable</td>
+      <td>Allows overriding the color configuration to set a drawable as the knob graphics.<br>
+          If present, both kKnob* and kKnobCenter* attributes will be ignored.</td></tr>
+  <tr><td>cKnobDrawableRotates</td>
+      <td>boolean</td>
+      <td>When true, the drawable will be rotated accordingly; otherwise, it will stay still.</td></tr>
+  <tr><td>cNumberOfStates</td>
+      <td>int</td>
+      <td>Number of possible states. States are numbered from 0 to n-1. This number can be changed runtime, and the indicator will adjust its position accordingly.</td></tr>
+  <tr><td>cSelectedStateMarkerColor</td>
+      <td>color</td>
+      <td>Color of the selected line marker.</td></tr>
+  <tr><td>cSelectedStateMarkerContinuous</td>
+      <td>boolean</td>
+      <td>If continuous mode is chosen, the knob will act like a gauge, selecting all the markers from the minimum to the current value. When false, only one marker is selected at any time.</td></tr>
+  <tr><td>cShowBalloonValues</td>
+      <td>boolean</td>
+      <td>Enable popup balloon values.</td></tr>
+  <tr><td>cStateMarkersAccentColor</td>
+      <td>color</td>
+      <td>Change accent color.</td></tr>
+  <tr><td>cStateMarkersAccentPeriodicity</td>
+      <td>int</td>
+      <td>How often these markers are shown. 0 = disable.</td></tr>
+  <tr><td>cStateMarkersColor</td>
+      <td>color</td>
+      <td>Color of the line markers.</td></tr>
+  <tr><td>cStateMarkersRelativeLength</td>
+      <td>int</td>
+      <td>Length of the line markers, relative to the largest possible circle inside the view.<br>
+          1 = draw from edge to center, 0.5 = draw half length starting from the edge.</td></tr>
+  <tr><td>cStateMarkersWidth</td>
+      <td>dimension</td>
+      <td>Width of the line markers.</td></tr>
+  <tr><td>cSwipe</td>
+      <td>string</td>
+      <td>Enable swipe. Values: off, vertical, horizontal, both, or circular (default: circular).</td></tr>
+</table>
+
+
+
+### 3. XML Integration
 
 To integrate Cyclic SeekBar into your layout, use the following XML structure with customizable attributes:
 
@@ -77,7 +165,7 @@ To integrate Cyclic SeekBar into your layout, use the following XML structure wi
 ```
 
 
-### 3. Implementation
+### 4. Implementation
 
 #### Kotlin Example:
 
@@ -100,6 +188,10 @@ class MainActivity : AppCompatActivity() {
     }
 }
 ```
+
+## Screen Demo
+
+![Demo](https://github.com/hypersoftdev/CyclicSeekbar/blob/master/screens/screen1.gif?raw=true)
 
 # Acknowledgements
 
