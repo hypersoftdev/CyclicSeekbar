@@ -31,7 +31,7 @@ repositories {
 Include the cyclic seekbar library in your **app-level** `build.gradle` file. Replace `x.x.x` with the latest version: [![](https://jitpack.io/v/hypersoftdev/CyclicSeekbar.svg)](https://jitpack.io/#hypersoftdev/CyclicSeekbar)
 
 ```
-implementation 'com.github.hypersoftdev:CyclicSeekbarr:x.x.x'
+implementation 'com.github.hypersoftdev:CyclicSeekbar:x.x.x'
 ```
 
 ### 2. XML Integration
