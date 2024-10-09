@@ -101,6 +101,10 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
+## Screen Demo
+
+![Demo](https://github.com/hypersoftdev/CyclicSeekbar/blob/master/screens/screen1.gif?raw=true)
+
 # Acknowledgements
 
 This work would not have been possible without the invaluable contributions of **Muhammad Asif**. His expertise, dedication, and unwavering support have been instrumental in bringing this project to fruition.
